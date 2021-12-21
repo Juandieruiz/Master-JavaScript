@@ -46,7 +46,7 @@ _Learning_
 ## Thanks for comming 🎁
 
 * Search me in social media 📢
-* Invite me a coffe in (https://buymeacoffe.com/juandieruiz) . 
+* Invite me a coffe in (https://www.buymeacoffee.com/juandieruiz) . 
 
 
 
