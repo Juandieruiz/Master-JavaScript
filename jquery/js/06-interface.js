@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     // Selectable
     // Sirve para seleccionar elementos
-    // $(".lista-seleccionable").selectable();
+    $(".lista-seleccionable").selectable();
 
     // Sortable
     // Sirve para ordenar elementos
@@ -22,5 +22,10 @@ $(document).ready(function(){
 
     // Droppable
     // Sirve para añadir elementos
-    
+    $("#elemento-movido").draggable();
+    $("#area").droppable({
+        drop: function(){
+            console.log("Has soltado un objeto en el area")
+        }
+    })
 });
