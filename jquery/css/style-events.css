@@ -1,0 +1,40 @@
+#caja{
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    background-color: lightskyblue;
+    border: 2px solid #000;
+    border-radius: 20px;
+    text-align: center;
+}
+input{
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    font-size: 20px;
+    justify-content: right;
+}
+
+#datos{
+    border: 4px dashed black;
+    padding: 10px;
+    width:  250px;
+    margin-top: 10px;
+    display: none;
+}
+#circle{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    display: block;
+    background: goldenrod;
+    opacity: 0.5;
+    border-radius: 999px;
+}
+/*
+#caja:hover{
+    background-color: red;
+    transition: 300ms all;
+    cursor: pointer;
+}
+*/

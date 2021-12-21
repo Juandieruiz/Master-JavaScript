@@ -1,0 +1,31 @@
+.container-A{
+    text-align: center;
+}
+.formulario{
+    width: 400px;
+    height: 250px;
+    margin: auto;
+    background-color: lightyellow;
+    padding: 20px;
+    border-radius: 10px;
+    border: black solid 1px;
+}
+
+input{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: black solid 1px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.datos{
+    text-align: left;
+    padding: auto;
+    margin: auto;
+}
+
+.container-B{
+    border: 3px  black;
+}

@@ -1,0 +1,17 @@
+
+.bordes{
+    border: 4px dashed black;
+}
+
+.grande{
+    font-size: 30px;
+}
+
+.margen-superior{
+    display: block;
+    margin-top: 45px;
+}
+
+.resaltado{
+    border-bottom: 2px solid red;
+}

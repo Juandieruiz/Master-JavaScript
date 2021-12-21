@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Práctica DOM</title>
+        <link href="css/formulario.css"/>
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/formulario.js"></script>
+    </head>
+    <body>
+        <!--    
+            1. Formulario campos: Nombre, Apellidos y edad
+            2. Boton de enviar el formulario: eventos submit
+            3. Mostrar Datos por pantalla
+            4. Validar Formulario
+        -->
+        <div class="container-A">
+        <h1>Ejercicio DOM,Eventos y funciones - Master JS</h1>
+        <div class="formulario">
+        <form action="" method="post" id="formulario" onsubmit="return false">
+            <h4>Formulario</h4>
+            <p>
+            <input type="text" id="nombre" name="Nombre" placeholder="Nombre" required>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+            <input type="number" id="edad" name="edad" placeholder="Edad" required>
+            <input type="submit" value="Enviar" id="submit">
+        </p>
+        </form>
+        </div> 
+    </div>
+        <hr>
+        <div id="container-B">
+            <h3>Datos del Usuario</h3>
+            <!-- Tipo 1: Llegan de JS Por el Bucle forIn -->
+            
+            <!-- Tipo 2: Cargando los Datos desde JS -->
+            <p id="p_nombre">
+                Nombre:<span></span>
+            </p>
+            <p id="p_apellidos">
+                Apellidos:<span></span>
+            </p>
+            <p id="p_edad">
+                Edad:<span></span>
+            </p>
+        </div>
+    </body>
+</html>
