@@ -35,4 +35,11 @@ $(document).ready(function(){
         // Ahora se puede usar el efecto
         $(".caja-efectos").toggle("explode", 4000);
     });
+
+    // Tooltip
+    // Sirve para mostrar un texto al pasar el ratón por encima de un elemento
+    $("#tooltip").tooltip();
+
+
+
 });
