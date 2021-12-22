@@ -47,6 +47,10 @@ $(document).ready(function(){
     });
 
     // Datepicker
+    // Sirve para mostrar un calendario
     $("#calendario").datepicker();
 
+    // Tabs
+    // Sirve para mostrar pestañas
+    $("#pestanas").tabs();
 });
