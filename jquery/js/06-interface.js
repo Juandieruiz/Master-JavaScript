@@ -40,6 +40,11 @@ $(document).ready(function(){
     // Sirve para mostrar un texto al pasar el ratón por encima de un elemento
     $("#tooltip").tooltip();
 
+    // Dialog
+    // Sirve para mostrar un cuadro de dialogo
+    $("#lanzar-popup").click(function(){
 
+    $("#popup").dialog();
+    });
 
 });

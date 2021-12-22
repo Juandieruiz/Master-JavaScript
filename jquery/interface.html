@@ -9,10 +9,11 @@
     <!-- JQUERY -->
     <script type="text/javascript" src="js/archivo-query.js"></script>
 
+    <!-- JQUERY UI CSS-->
     <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.min.css">
     <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.structure.min.css">
     <link rel="stylesheet" href="js/jquery-ui-1.13.0/jquery-ui.theme.min.css">
-    
+    <!-- JQUERY & JS -->
     <script type="text/javascript" src="js/jquery-ui-1.13.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/06-interface.js"></script>
 </head>
@@ -21,34 +22,49 @@
 <body>
     <h1>Aprendiendo JQuery en Master JavaScript - JQuery UI</h1>
 
-    <hr>
+    <!-- Pop-ups - Dialog-->
+    <h3>Cuadros de Dialogos</h3>
+    <button id="lanzar-popup">Lanzame</button>
+    <div id="popup" title="¿Estas seguro?"  style="display: none;">
+        <p>
+            Si continuas, seguiras formandote en JavaScript
+        </p>
+    </div>
 
+    <hr>
+    <!-- Tooltip -->
     <h3>Tooltip</h3>
     <a href="#" id="tooltip" title="Acceder a mis datos">Mis datos</a>
     <a href="#" id="tooltip" title="Logueate en esta web">Identificarse</a>
     <a href="#" id="tooltip" title="Ver todos mis amigos">Amigos</a>
-    
-    
     <hr>
+    <!-- Efectos -->
+    <hr>
+    <h3>Efectos con JQUERY</h3>
     <button id="lanza-efecto">Mostrar </button>
 
     <div class="caja-efectos elemento">
-        
     </div>
+    <hr>
+    <h3>Deteccion de are droppeable</h3>
     <div id="elemento-movido"></div>
     <br>
     <div id="area" ></div>
 
+    <!-- Selectable -->
+    <hr>
+    <h3>Ranking de Juegos</h3>
     <ul class="lista-seleccionable">
         <li>GTA 5</li>
         <li>Fortnite</li>
         <li>Rainbow Six Siege</li>
         <li>Mario Bros</li>
         <li>Call of Duty</li>
-
     </ul>
 
-
+    <!-- Draggable & Resizable -->
+    <hr>
+    <h3>Draggable & Resizable</h3>
     <div class="elemento">
         Hola, Soy un elemento de la página.
     </div>
