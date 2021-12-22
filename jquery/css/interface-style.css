@@ -35,3 +35,11 @@ ul .ui-selected{
     border: 4px solid green;
     
 }
+
+.elemento{
+
+    background-color: pink;
+    float: none;
+    display: none;
+
+}

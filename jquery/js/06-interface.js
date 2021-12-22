@@ -27,5 +27,12 @@ $(document).ready(function(){
         drop: function(){
             console.log("Has soltado un objeto en el area")
         }
-    })
+    });
+
+    // Efectos
+    $("#lanza-efecto").click(function(){
+        console.log("Click en el boton");
+        // Ahora se puede usar el efecto
+        $(".caja-efectos").toggle("explode", 4000);
+    });
 });
