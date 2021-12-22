@@ -43,8 +43,10 @@ $(document).ready(function(){
     // Dialog
     // Sirve para mostrar un cuadro de dialogo
     $("#lanzar-popup").click(function(){
-
     $("#popup").dialog();
     });
+
+    // Datepicker
+    $("#calendario").datepicker();
 
 });
