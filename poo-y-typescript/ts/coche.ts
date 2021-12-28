@@ -1,5 +1,12 @@
 // Clase (molde de objeto) Coche
-export class Coche{
+// export class Coche{
+// ? Interfaces
+interface CocheBase{
+    setColor(color);
+    getColor();
+}
+
+class Coche implements CocheBase{
 
     // Propiedades (características del objeto)
     private color: string;
@@ -29,7 +36,6 @@ export class Coche{
 }
 // Creamos un objeto de la clase Coche
 let cocheY = new Coche("rojo", "Model Y", "Tesla", 100000, true);
-    cocheY.setColor("Blue");
 
 console.log(cocheY);
 

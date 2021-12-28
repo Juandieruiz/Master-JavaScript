@@ -1,7 +1,3 @@
-"use strict";
-exports.__esModule = true;
-exports.Coche = void 0;
-// Clase (molde de objeto) Coche
 var Coche = /** @class */ (function () {
     // Métodos (funciones o acciones del objeto)  
     // CONSTRUCTOR Se ejecuta cuando creamos una instancia de la clase
@@ -20,10 +16,8 @@ var Coche = /** @class */ (function () {
     };
     return Coche;
 }());
-exports.Coche = Coche;
 // Creamos un objeto de la clase Coche
 var cocheY = new Coche("rojo", "Model Y", "Tesla", 100000, true);
-cocheY.setColor("Blue");
 console.log(cocheY);
 //  !NO PUEDES ACCEDER A LAS PROPIEDAS DE UN OBJETO PRIVADO
 // let cocheX = new Coche();

@@ -1,4 +1,4 @@
-import { Coche } from "./coche";
+// import { Coche } from "./coche";
 
 class Main{
     constructor(){
