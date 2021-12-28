@@ -4,6 +4,11 @@
 <p>¡Hora de aprender angular!</p>
 </div>
 
+<button (click)="Ranking(false)" *ngIf="mostrarVideojuegos">Ocultar Ranking</button>
+<button (click)="Ranking(true)" *ngIf="!mostrarVideojuegos">Mostrar Ranking</button>
+
+
 <div id="videojuego">
-    <app-videojuego></app-videojuego>
+    <!-- Probando Hook de ngOnDestroy -->
+    <app-videojuego *ngIf="mostrarVideojuegos"></app-videojuego>
 </div>
