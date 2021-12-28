@@ -39,6 +39,23 @@ let cocheY = new Coche("rojo", "Model Y", "Tesla", 100000, true);
 
 console.log(cocheY);
 
+// Clase hija
+
+class CocheElectrico extends Coche{
+    constructor(color: string, model: string, owner: string, price: number, autopilot: boolean, battery: number){
+        super(color, model, owner, price, autopilot);
+        this.battery = battery;
+    }
+
+    private battery: number;
+}
+
+let cocheE = new CocheElectrico("azul", "Model X", "Tesla", 100000, true, 100);
+
+console.log(cocheE);
+
+
+
 
 //  !NO PUEDES ACCEDER A LAS PROPIEDAS DE UN OBJETO PRIVADO
 // let cocheX = new Coche();
