@@ -6,6 +6,18 @@ interface CocheBase{
     getColor();
 }
 
+// Decorador
+
+function agregarLogo(logo: string){
+    return function(target: Function){
+        target.prototype.pegarlogo = function():void{
+            console.log("Pegando el logo de: " + logo);
+        }
+    }
+}
+
+
+// @agregarLogo("logo"); // Decorador
 class Coche implements CocheBase{
 
     // Propiedades (características del objeto)
@@ -36,7 +48,7 @@ class Coche implements CocheBase{
 }
 // Creamos un objeto de la clase Coche
 let cocheY = new Coche("rojo", "Model Y", "Tesla", 100000, true);
-
+// cocheY.agregarlogo();
 console.log(cocheY);
 
 // Clase hija
