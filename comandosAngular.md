@@ -1,21 +1,26 @@
 
-###Uninstall Angular
+### Uninstall Angular
 ```
 npm uninstall -g @angular/cli
 ```
 
-###Verify caché
+### Verify caché
 ```
 npm cache verify
 ```
 
-###clear caché
+### clear caché
 ```
 npm cache clear --force
 ```
 
-###Install Angular
-
+### Install Angular
 ```
 npm install -g @angular/cli
+```
+
+### RUN Angular
+```
+ng serve -o
+ng serve -o --port 4200
 ```
