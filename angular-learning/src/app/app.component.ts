@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'Master JavaScript & Angular';
-  public mostrarVideojuegos: boolean = true;
+  public mostrarVideojuegos: boolean = false;
 
-  Ranking(value: any) {
+  Xbox(value: any) {
     this.mostrarVideojuegos = value;
   }
 

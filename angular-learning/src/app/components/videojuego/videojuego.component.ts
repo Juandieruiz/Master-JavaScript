@@ -8,13 +8,22 @@
     export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
       public titulo: string;
       public listado:string;
+      public mostrarRainbowSixSiege: boolean = false;
 
       constructor() { 
-        this.titulo = 'Componente de videojuegos';
-        this.listado = 'Aquí se mostrará el listado de los videojuegos';
+        this.titulo = 'Bienvenido a tu Xbox One';
+        this.listado = 'Listado de tus videojuegos';
         // Se ejecuta antes de que se cargue el componente
         // console.log('Constructor EJECUTADO...');
       }
+        elegirJuegoRainbow(value:any) {
+        this.titulo = 'Bienvenido a Rainbow Six Siege';
+        this.mostrarRainbowSixSiege = value
+      }
+
+
+
+
 
       ngOnInit(): void {
         // Se ejecuta después de que se cargue el componente
@@ -30,7 +39,7 @@
           // console.log("OnDestroy EJECUTADO...");
       }
 
-      cambiarTitulo() {
-        this.titulo = 'Bienvenido a Rainbow Six Siege';
-      }
+     
+
+      
     }

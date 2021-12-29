@@ -1,14 +1,15 @@
 <h2>{{titulo}}</h2>
 <p>{{listado}}</p>
 
-<button (click)="cambiarTitulo()">Cambiar titulo</button>
+<button (click)="elegirJuegoRainbow(false)" *ngIf="mostrarRainbowSixSiege">Cerrar Rainbow Six</button>
+<button (click)="elegirJuegoRainbow(true)"*ngIf="!mostrarRainbowSixSiege">Abrir Rainbow Six</button>
+
 
 <ul>
-    <li>GTA V</li>
+    
     <li>Rainbow Six Siege</li>
-    <li>Fortnite</li>
-    <li>Overwatch</li>
 </ul>
 
-<h2>Open game:</h2>
-<app-rainbow-six-siege></app-rainbow-six-siege>
+<div id="rainbowGame">
+<app-rainbow-six-siege *ngIf="mostrarRainbowSixSiege"></app-rainbow-six-siege>
+</div>
