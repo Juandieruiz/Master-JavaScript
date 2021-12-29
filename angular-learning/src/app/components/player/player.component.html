@@ -1,3 +1,5 @@
+<div id="caja-global">
+    <div id="caja-datos">
 <h2>{{team}}</h2>
 
 <ol>
@@ -10,7 +12,9 @@
                 <hr>
             </li>
 </ol>
+</div>
 <hr>
+<div id="caja-informacion">
 <p>Armas usadas por Jugadores Disponibles:</p>
     <ol>
         <li *ngFor="let arma of armeria">
@@ -27,5 +31,5 @@
         <li *ngSwitchCase="'mapa3'">Los jugadores han seleccionado(mapa3) FAVELAS</li>
 
     </ul>
-
-    
+</div>
+</div>
