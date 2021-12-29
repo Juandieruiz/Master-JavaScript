@@ -10,15 +10,17 @@ export class PlayerComponent implements OnInit {
 public player: Array<Player>;
 public team: string = "Equipo Atacante";
 public armeria: String[];
+public mapa: String;
 
   constructor() { 
+    this.mapa = 'mapa2';
     this.armeria = new Array();
     this.player = [
-        new Player('Kali', 'Francotirador', 'Subfusil', 'Flack', false),
-        new Player('Leon', 'M4- R7', '.90', 'Localizer', true),
-        new Player('Ash', 'Ak - md', 'revolver', 'BreacherWall', true),
-        new Player('Zero', 'raz 23', 'minigun', 'HackerCam', true),
-        new Player('Gridlock', 'Fusil', 'miniescopeta', 'Knifes', false),
+        new Player('Kali', 'Francotirador', 'Subfusil', 'Flack','mapa1', false),
+        new Player('Leon', 'M4- R7', '.90', 'Localizer','mapa2', true),
+        new Player('Ash', 'Ak - md', 'revolver', 'BreacherWall','mapa2', true),
+        new Player('Zero', 'raz 23', 'minigun', 'HackerCam','mapa3', true),
+        new Player('Gridlock', 'Fusil', 'miniescopeta', 'Knifes','mapa2', false),
     ];
   }
 
@@ -30,11 +32,11 @@ public armeria: String[];
     this.player.forEach((select,index) => {
       if(select.disponible){
         this.armeria.push("Arma 1: " + select.arma1  + " | Arma 2: " + select.arma2);
-
+        
       }
     });
 
-    console.log(this.armeria);
   }
+  
 
 }

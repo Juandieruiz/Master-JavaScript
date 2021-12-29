@@ -1,13 +1,31 @@
-{{team}}
+<h2>{{team}}</h2>
 
-<ul>
+<ol>
     <li *ngFor="let user of player">
         {{user.nombre}}
-        {{user.arma1}}
-        {{user.arma2}}
         {{user.especialidad}}
+        <p>El usuario eligió el mapa: {{user.mapa}}</p>
                <span id="disponible" *ngIf="user.disponible == true"> Jugador Disponible</span>
-        <span id="nodisponible" *ngIf="user.disponible == false"> Jugador Bloqueado</span>
-
+                <span id="nodisponible" *ngIf="user.disponible == false"> Jugador Bloqueado</span>
+                <hr>
             </li>
-</ul>
+</ol>
+<hr>
+<p>Armas usadas por Jugadores Disponibles:</p>
+    <ol>
+        <li *ngFor="let arma of armeria">
+            {{arma}}
+        </li>
+
+    </ol>
+    <hr>
+    <p>Eleccion de mapa:</p>
+
+    <ul [ngSwitch]="mapa">
+        <li *ngSwitchCase="'mapa1'">Los jugadores han seleccionado(mapa1) LITORAL</li>
+        <li *ngSwitchCase="'mapa2'">Los jugadores han seleccionado(mapa2) BANCO</li>
+        <li *ngSwitchCase="'mapa3'">Los jugadores han seleccionado(mapa3) FAVELAS</li>
+
+    </ul>
+
+    

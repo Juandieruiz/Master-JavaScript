@@ -22,6 +22,7 @@ export class Player{
         public arma1: string,
         public arma2: string,
         public especialidad: string,
+        public mapa: string,
         public disponible: boolean
     ){}
     

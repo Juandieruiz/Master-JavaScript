@@ -1,7 +1,9 @@
 #disponible{
-    color: green;
+    background-color: green;
+    color: white;
 }
 
 #nodisponible{
-    color: red;
+    background-color: red;
+    color: white;
 }
