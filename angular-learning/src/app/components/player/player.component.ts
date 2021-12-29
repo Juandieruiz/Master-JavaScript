@@ -12,9 +12,9 @@ public team: string = "Equipo Atacante";
 
   constructor() { 
     this.player = [
-        new Player('Kali', 'Francotirador', 'Subfusil', 'Flack', true),
+        new Player('Kali', 'Francotirador', 'Subfusil', 'Flack', false),
         new Player('Leon', 'M4- R7', '.90', 'Localizer', true),
-        new Player('Ash', 'Ak - md', 'revolver', 'BreacherWall', true),
+        new Player('Ash', 'Ak - md', 'revolver', 'BreacherWall', false),
         new Player('Zero', 'raz 23', 'minigun', 'HackerCam', true),
         new Player('Gridlock', 'Fusil', 'miniescopeta', 'Knifes', true),
     ];

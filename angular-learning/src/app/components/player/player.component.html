@@ -6,7 +6,8 @@
         {{user.arma1}}
         {{user.arma2}}
         {{user.especialidad}}
-        {{user.disponible}}
+               <span id="disponible" *ngIf="user.disponible == true"> Jugador Disponible</span>
+        <span id="nodisponible" *ngIf="user.disponible == false"> Jugador Bloqueado</span>
 
-    </li>
+            </li>
 </ul>
