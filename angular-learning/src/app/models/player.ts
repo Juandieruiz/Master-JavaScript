@@ -19,8 +19,8 @@ export class Player{
    // Método 2
     constructor(
         public nombre: string,
-        public arma1: string,
-        public arma2: string,
+        public userName: string,
+        public tagName: string,
         public especialidad: string,
         public mapa: string,
         public disponible: boolean

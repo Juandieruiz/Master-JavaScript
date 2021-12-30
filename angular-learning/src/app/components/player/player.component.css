@@ -13,6 +13,15 @@
     border-radius: 5px;
     padding: 10px;
 }
+#caja-invitaciones {
+    width: 30%;
+    float: left;
+    height: 100%;
+    background-color: #f2f2f2;
+    border: 5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
 
 #caja-informacion{
     width: 30%;

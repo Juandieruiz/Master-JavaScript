@@ -1,14 +1,7 @@
 <div id="caja-global">
-    <div id="caja-datos">
-<h2>{{team}}</h2>
 
-<!-- ngModel(Two way data binding) -->
-<p>Nombre de usuario</p>
-<p><input type="text" [(ngModel)]="user_name"></p>
-<p>{{user_name}}</p>
-<!-- Función para mostrar nombre en alert -->
-<button (click)="sayMyName()">Say my name</button>
-<hr>
+<div id="caja-datos">
+
 <!-- Lista -->
 <ol>
     <li *ngFor="let user of player">
@@ -21,13 +14,26 @@
             </li>
 </ol>
 </div>
-<hr>
+<div id="caja-invitaciones">
+    <h2>{{team}}</h2>
+    
+    <!-- ngModel(Two way data binding) -->
+    <p>Agregar amigo:</p>
+    <p><input type="text" [(ngModel)]="user_name"></p>
+    <p>{{user_name}}</p>
+    <!-- Función para mostrar alert de Jugador  -->
+    <button (click)="myPlayer()">Verifica el nombre</button>
+    
+    <!-- Funcion para agregar a un Judagor a player -->
+    <button (click)="addPlayer()">Agregar amigo</button>
+    </div>
+
 <div id="caja-informacion">
     <!-- Información de Jugadores recopilada -->
-<p>Armas usadas por Jugadores Disponibles:</p>
+<p>Amigos Disponibles:</p>
     <ol>
-        <li *ngFor="let arma of armeria">
-            {{arma}}
+        <li *ngFor="let amigo of jugadores">
+            {{amigo}}
         </li>
 
     </ol>
