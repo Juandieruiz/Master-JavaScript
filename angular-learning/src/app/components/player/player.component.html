@@ -39,11 +39,11 @@
     </ol>
     <hr>
     <p>Eleccion de mapa:</p>
-
+    <input type="text" [(ngModel)]="mapa">
     <ul [ngSwitch]="mapa">
-        <li *ngSwitchCase="'mapa1'">Los jugadores han seleccionado(mapa1) LITORAL</li>
-        <li *ngSwitchCase="'mapa2'">Los jugadores han seleccionado(mapa2) BANCO</li>
-        <li *ngSwitchCase="'mapa3'">Los jugadores han seleccionado(mapa3) FAVELAS</li>
+        <li *ngSwitchCase="'mapa1'">Los jugadores han seleccionado LITORAL</li>
+        <li *ngSwitchCase="'mapa2'">Los jugadores han seleccionado BANCO</li>
+        <li *ngSwitchCase="'mapa3'">Los jugadores han seleccionado FAVELAS</li>
 
     </ul>
 </div>
