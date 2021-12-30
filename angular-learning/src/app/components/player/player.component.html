@@ -2,6 +2,14 @@
     <div id="caja-datos">
 <h2>{{team}}</h2>
 
+<!-- ngModel(Two way data binding) -->
+<p>Nombre de usuario</p>
+<p><input type="text" [(ngModel)]="user_name"></p>
+<p>{{user_name}}</p>
+<!-- Función para mostrar nombre en alert -->
+<button (click)="sayMyName()">Say my name</button>
+<hr>
+<!-- Lista -->
 <ol>
     <li *ngFor="let user of player">
         {{user.nombre}}
@@ -15,6 +23,7 @@
 </div>
 <hr>
 <div id="caja-informacion">
+    <!-- Información de Jugadores recopilada -->
 <p>Armas usadas por Jugadores Disponibles:</p>
     <ol>
         <li *ngFor="let arma of armeria">

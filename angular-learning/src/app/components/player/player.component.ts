@@ -11,10 +11,12 @@ public player: Array<Player>;
 public team: string = "Equipo Atacante";
 public armeria: String[];
 public mapa: String;
+public user_name: string;
 
   constructor() { 
     this.mapa = 'mapa2';
     this.armeria = new Array();
+    this.user_name = 'user_name';
     this.player = [
         new Player('Kali', 'Francotirador', 'Subfusil', 'Flack','mapa1', false),
         new Player('Leon', 'M4- R7', '.90', 'Localizer','mapa2', true),
@@ -35,7 +37,10 @@ public mapa: String;
         
       }
     });
+  }
 
+  sayMyName(){
+    alert("El usuario actual del juego es: " + this.user_name);
   }
   
 
