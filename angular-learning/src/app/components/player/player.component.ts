@@ -47,5 +47,8 @@ public user_name: string;
     this.jugadores.push("Nombre de usuario: " +this.user_name);
   }
   
-
+  borrarAmigo(indice: any){
+    // delete this.player[indice];
+    this.jugadores.splice(indice,1);
+  }
 }

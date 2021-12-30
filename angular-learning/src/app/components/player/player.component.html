@@ -31,12 +31,13 @@
 <div id="caja-informacion">
     <!-- Información de Jugadores recopilada -->
 <p>Amigos Disponibles:</p>
-    <ol>
-        <li *ngFor="let amigo of jugadores">
-            {{amigo}}
+    <ul>
+        <li *ngFor="let amigo of jugadores; let indice = index">
+            {{indice + ' - ' + amigo}}
+            <button (click)="borrarAmigo(indice)">Borrar Amigo</button>
         </li>
 
-    </ol>
+    </ul>
     <hr>
     <p>Eleccion de mapa:</p>
     <input type="text" [(ngModel)]="mapa">
