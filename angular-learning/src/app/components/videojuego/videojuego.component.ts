@@ -9,10 +9,14 @@
       public titulo: string;
       public listado:string;
       public mostrarRainbowSixSiege: boolean = false;
+      public mostrarVideojuegos: boolean = false;
+
+  
 
       constructor() { 
         this.titulo = 'Bienvenido a tu Xbox One';
         this.listado = 'Listado de tus videojuegos';
+        
         // Se ejecuta antes de que se cargue el componente
         // console.log('Constructor EJECUTADO...');
       }
@@ -20,10 +24,9 @@
         this.titulo = 'Bienvenido a Rainbow Six Siege';
         this.mostrarRainbowSixSiege = value
       }
-
-
-
-
+      Xbox(value: any) {
+        this.mostrarVideojuegos = value;
+      }
 
       ngOnInit(): void {
         // Se ejecuta después de que se cargue el componente

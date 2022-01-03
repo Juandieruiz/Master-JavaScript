@@ -6,7 +6,7 @@ import { RainbowSixSiegeComponent } from './components/rainbow-six-siege/rainbow
 import { VideojuegoComponent } from './components/videojuego/videojuego.component';
 
 const routes: Routes = [
-  { path: '',
+  { path: 'home',
     component: HomeComponent,
   },
   { path: 'player',
