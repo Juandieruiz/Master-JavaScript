@@ -8,6 +8,7 @@ import { VideojuegoComponent } from './components/videojuego/videojuego.componen
 import { RainbowSixSiegeComponent } from './components/rainbow-six-siege/rainbow-six-siege.component';
 import { PlayerComponent } from './components/player/player.component';
 import { HomeComponent } from './components/home/home.component';
+import { CursosComponent } from './components/cursos/cursos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HomeComponent } from './components/home/home.component';
     VideojuegoComponent,
     RainbowSixSiegeComponent,
     PlayerComponent,
-    HomeComponent
+    HomeComponent,
+    CursosComponent
   ],
   imports: [
     BrowserModule,

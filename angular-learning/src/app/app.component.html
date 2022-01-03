@@ -1,4 +1,9 @@
-<div>
+<div [ngStyle]="{'background': config.fondo,
+                'padding': '20px',
+                'border': '5px solid black',
+                'border-color': config.color
+                
+                }">
 <h1>Bienvenidos a {{title}}</h1>
 
 <p>¡Hora de aprender angular!</p>
@@ -11,7 +16,8 @@
     <a [routerLink]="['/rainbow']" [routerLinkActive]="['active']">Rainbow</a>
     &nbsp;
     <a [routerLink]="['/player']" [routerLinkActive]="['active']">Player</a>
-
+    &nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
 </nav>
 
 <router-outlet></router-outlet>
