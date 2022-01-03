@@ -3,18 +3,21 @@
 
 <p>¡Hora de aprender angular!</p>
 
+<nav>
+    <a [routerLink]="['/']">Home</a>
+    &nbsp;
+    <a [routerLink]="['/xbox']">Xbox</a>
+    &nbsp;
+    <a [routerLink]="['/rainbow']">Rainbow</a>
+    &nbsp;
+    <a [routerLink]="['/player']">Player</a>
+
+</nav>
+
 <router-outlet></router-outlet>
 </div>
 <!-- ? Encendido de Xbox -->
-<!-- <button (click)="Xbox(false)" *ngIf="mostrarVideojuegos">Apagar Xbox</button>
-<button (click)="Xbox(true)" *ngIf="!mostrarVideojuegos">Encender Xbox</button>
 
-    Probando Hook de ngOnDestroy
-
-<div id="videojuego">
-    <app-videojuego *ngIf="mostrarVideojuegos"></app-videojuego>
-
-</div> -->
 
 <!-- ? Cargando Videojuego Rainbow -->
 <!-- <app-rainbow-six-siege></app-rainbow-six-siege> -->
