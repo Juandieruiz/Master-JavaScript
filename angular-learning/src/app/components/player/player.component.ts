@@ -51,4 +51,12 @@ public user_name: string;
     // delete this.player[indice];
     this.jugadores.splice(indice,1);
   }
+
+  onBlur(){
+    console.log("you enter in the blur")
+  }
+
+  alertName(){
+    alert(this.user_name)
+  }
 }

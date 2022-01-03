@@ -19,7 +19,7 @@
     
     <!-- ngModel(Two way data binding) -->
     <p>Agregar amigo:</p>
-    <p><input type="text" [(ngModel)]="user_name"></p>
+    <p><input type="text" [(ngModel)]="user_name" (keyup.enter)="alertName()"></p>
     <p>{{user_name}}</p>
     <!-- Función para mostrar alert de Jugador  -->
     <button (click)="myPlayer()">Verifica el nombre</button>
