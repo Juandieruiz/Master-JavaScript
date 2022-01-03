@@ -6,7 +6,8 @@
 <ol>
     <li *ngFor="let user of player">
         {{user.nombre}}
-        {{user.especialidad}}
+        <strong [class.nivelAlto]="user.level >= 60">Nivel:
+        {{user.level}}</strong>
         <p>El usuario eligió el mapa: {{user.mapa}}</p>
                <span id="disponible" *ngIf="user.disponible == true"> Jugador Disponible</span>
                 <span id="nodisponible" *ngIf="user.disponible == false"> Jugador Bloqueado</span>

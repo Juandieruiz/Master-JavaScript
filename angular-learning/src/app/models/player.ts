@@ -21,7 +21,7 @@ export class Player{
         public nombre: string,
         public userName: string,
         public tagName: string,
-        public especialidad: string,
+        public level: number,
         public mapa: string,
         public disponible: boolean
     ){}
