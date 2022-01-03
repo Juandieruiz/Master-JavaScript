@@ -5,8 +5,15 @@
 <!-- Lista -->
 <ol>
     <li *ngFor="let user of player">
-        {{user.nombre}}
-        <strong [class.nivelAlto]="user.level >= 60">Nivel:
+        {{user.nombre}} 
+        <p>Nivel:</p><strong 
+            [class.altoLevel] ="user.level > 500" 
+            [ngClass]="{'nivelBajo': user.level < 20,
+                        'nivelMedio': user.level > 20,
+                        'nivelAlto': user.level > 90,
+                        'nivelPro': user.level > 130,
+                        'nivelDiamante': user.level > 150
+                            }">
         {{user.level}}</strong>
         <p>El usuario eligió el mapa: {{user.mapa}}</p>
                <span id="disponible" *ngIf="user.disponible == true"> Jugador Disponible</span>

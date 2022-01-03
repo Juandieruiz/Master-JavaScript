@@ -18,11 +18,11 @@ public user_name: string;
     this.jugadores = new Array();
     this.user_name = 'user_name';
     this.player = [
-        new Player('Kali', 'Luis Alejandro', 'luisillo', 40,'mapa1', false),
-        new Player('Leon', 'Jose Miguel', '.joselillo', 20,'mapa2', true),
-        new Player('Ash', 'Luisa Fernanda', 'luisilla', 82,'mapa2', true),
-        new Player('Zero', 'Diego Andres', 'dieguillo', 124,'mapa3', true),
-        new Player('Gridlock', 'Alex Torres', 'alexillo', 55,'mapa2', false),
+        new Player('Kali', 'Luis Alejandro', 'luisillo', 18,'mapa1', false),
+        new Player('Leon', 'Jose Miguel', '.joselillo', 48,'mapa2', true),
+        new Player('Ash', 'Luisa Fernanda', 'luisilla', 95,'mapa2', true),
+        new Player('Zero', 'Diego Andres', 'dieguillo', 135,'mapa3', true),
+        new Player('Gridlock', 'Alex Torres', 'alexillo', 250,'mapa2', false),
     ];
   }
 

@@ -47,7 +47,25 @@
     color: white;
 }
 
+
+
+.nivelBajo{
+    color: violet;
+}
+
+.nivelMedio{
+    color: blue;
+}
+
 .nivelAlto{
     color:green;
     font-size: 18px;
+}
+
+.nivelPro{
+    color: gold;
+}
+
+.nivelDiamante{
+    color: red
 }
