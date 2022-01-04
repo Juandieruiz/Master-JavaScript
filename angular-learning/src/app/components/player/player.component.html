@@ -4,7 +4,7 @@
 
 <!-- Lista -->
 <ol>
-    <li *ngFor="let user of player">
+    <li *ngFor="let user of players">
         {{user.nombre}} 
         <p>Nivel:</p><strong 
             [class.altoLevel] ="user.level > 500" 

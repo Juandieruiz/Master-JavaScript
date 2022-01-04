@@ -1,37 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../../models/player';
-
+import { Player } from 'src/app/models/player';
+import { PlayerService } from 'src/app/services/player.service';
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css']
 })
-export class PlayerComponent implements OnInit {
-public player: Array<Player>;
-public team: string = "Equipo Atacante";
-public jugadores: String[];
-public mapa: String;
-public user_name: string;
 
-  constructor() { 
+export class PlayerComponent implements OnInit {
+  public team: string = "Equipo Atacante";
+  public jugadores: String[];
+  public mapa: String;
+  public user_name: string;
+  public players: Array<Player> = [];
+
+  constructor(
+    private _playerService: PlayerService) { 
+
     this.mapa = 'mapa2';
     this.jugadores = new Array();
     this.user_name = 'user_name';
-    this.player = [
-        new Player('Kali', 'Luis Alejandro', 'luisillo', 18,'mapa1', false),
-        new Player('Leon', 'Jose Miguel', '.joselillo', 48,'mapa2', true),
-        new Player('Ash', 'Luisa Fernanda', 'luisilla', 95,'mapa2', true),
-        new Player('Zero', 'Diego Andres', 'dieguillo', 135,'mapa3', true),
-        new Player('Gridlock', 'Alex Torres', 'alexillo', 250,'mapa2', false),
-    ];
+    
   }
 
-  ngOnInit(): void {
-    this.getArmeria();
+  ngOnInit(){
+    this.players = this._playerService.getPlayers();
   }
 
   getArmeria(){
-    this.player.forEach((select,index) => {
+    this.players.forEach((select,index) => {
       if(select.disponible){
         this.jugadores.push("Nombre de usuario: " + select.userName );
         
