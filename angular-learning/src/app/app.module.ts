@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// Formularios
 import { FormsModule } from '@angular/forms';
+// Cliente HTTP
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +12,7 @@ import { RainbowSixSiegeComponent } from './components/rainbow-six-siege/rainbow
 import { PlayerComponent } from './components/player/player.component';
 import { HomeComponent } from './components/home/home.component';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { ExternoComponent } from './components/externo/externo.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,14 @@ import { CursosComponent } from './components/cursos/cursos.component';
     RainbowSixSiegeComponent,
     PlayerComponent,
     HomeComponent,
-    CursosComponent
+    CursosComponent,
+    ExternoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

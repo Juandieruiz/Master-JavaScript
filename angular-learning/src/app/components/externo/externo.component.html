@@ -1,0 +1,11 @@
+<div>
+    <h1>Petición A Reqres.in</h1>
+    <p>Peticion por servicio y cliente Http para recibir un usuario</p>
+</div>
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()"/>
+<hr>
+<div *ngIf="user">
+    <img src="{{user.avatar}}" alt="{{user.name}}">
+    <h2>{{user.first_name + ' ' + user.last_name}}</h2>
+    <p>Email: {{user.email}}</p>
+</div>

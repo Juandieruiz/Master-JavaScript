@@ -15,16 +15,18 @@ export class PlayerComponent implements OnInit {
   public players: Array<Player> = [];
 
   constructor(
-    private _playerService: PlayerService) { 
-
-    this.mapa = 'mapa2';
-    this.jugadores = new Array();
-    this.user_name = 'user_name';
+    private _playerService: PlayerService
+    ) { 
+      this.mapa = 'mapa2';
+      this.jugadores = new Array();
+      this.user_name = 'user_name';
     
   }
 
   ngOnInit(){
     this.players = this._playerService.getPlayers();
+    alert(this._playerService.getTexto());
+    // this.getArmeria(); // inicializa el mapa elegido por los jugadores
   }
 
   getArmeria(){
