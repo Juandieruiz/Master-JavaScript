@@ -23,6 +23,7 @@ export class ExternoComponent implements OnInit {
   }
     
     cargaUsuario(){
+      this.user=false;
     // Suscribe tiene dos metodos de callback (result y error)
       this._peticionService.getUsers(this.userId).subscribe(
         result => {
