@@ -1,12 +1,17 @@
 <h2>Página principal</h2>
 
-<div *ngIf="identificado; else noIdentificado">
+<!-- Revisión de Identificacion -->
+<div *ngIf="identificado; then siIdentificado else noIdentificado"></div>
+
+<!-- !Templates a espera de ser llamados -->
+<!-- template Identificado -->
+<ng-template #siIdentificado>
     <h3>Estas identificado en la aplicación</h3>
     <button (click)="unsetIdentificado()">Borrar Identificación</button>
-</div>
+</ng-template>
 
+<!-- template no Identificado -->
 <ng-template #noIdentificado>
     <p>No estas identificado en la aplicación, Pulsa este boton para identificarte</p>
     <button (click)="setIdentificado()">Identificarse</button>
-
 </ng-template>
