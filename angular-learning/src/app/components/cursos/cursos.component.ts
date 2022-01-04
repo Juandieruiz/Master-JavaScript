@@ -25,8 +25,6 @@ export class CursosComponent implements OnInit {
       this._router.navigate(['/home'])
         
       }
-
-
     });
 
   }
