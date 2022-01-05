@@ -1,13 +1,23 @@
+
+<hr>
+<!-- Pipe date -->
+<p>Pipes de Fechas</p>
+<p>{{fecha | date:'dd/MM/YY'}}</p>
+<!-- Pipe de transformación de textos -->
+<p>{{fecha | date:'fullDate' | uppercase}}</p>
+{{ 'HOLA MUNDO USANDO PIPES DE ANGULAR' | lowercase }}
+
+<hr>
 <div>
     <h1>Petición A Reqres.in</h1>
     <p>Peticion por servicio y cliente Http para recibir un usuario</p>
+    <p>Digite un numero del 1 al 12 y presione la tecla Enter</p>
 </div>
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()"/>
-<hr>
 <div *ngIf="!user">
     Cargando...
 </div>
-
+<hr>
 <div *ngIf="user">
     <img src="{{user.avatar}}" alt="{{user.name}}">
     <h2>{{user.first_name + ' ' + user.last_name}}</h2>

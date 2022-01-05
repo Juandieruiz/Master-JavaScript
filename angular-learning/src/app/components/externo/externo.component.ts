@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 export class ExternoComponent implements OnInit {
   public user:any;
   public userId: any;
+  public fecha: any;
 
   constructor(
     
@@ -19,6 +20,9 @@ export class ExternoComponent implements OnInit {
       }
 
   ngOnInit() {
+    // Creación de Pipe
+    this.fecha = new Date();
+
     this.cargaUsuario();
   }
     
