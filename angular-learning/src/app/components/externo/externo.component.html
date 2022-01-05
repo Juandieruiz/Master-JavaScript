@@ -1,5 +1,30 @@
+<!-- TODO: Ejercicio formulario -->
+<h2>Crear usuario</h2>
 
+<form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <p>
+    <label for="name">Nombre</label>
+    <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" required>
+    <span *ngIf="!name.valid && name.touched">El nombre es requerido</span>
+    </p>
+
+    <p>
+        <label for="job">Trabajo</label>
+        <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required>
+        <span *ngIf="!job.valid && job.touched">El trabajo es requerido</span>
+    </p>
+
+    <input type="submit" value="Guardar usuario" [disabled]="!newUser.form.valid">
+</form>
+<!-- Si hay datos de usuario_guardado muestralo por pantalla -->
+<div *ngIf="usuario_guardado">
+    <h2>El usuario se ha guardado correctamente</h2>
+    <p>Nombre: {{ usuario_guardado.name }}</p>
+    <p>Trabajo: {{ usuario_guardado.job }}</p>
+</div>
 <hr>
+
+
 <!-- Pipe date -->
 <p>Pipes de Fechas</p>
 <p>{{fecha | date:'dd/MM/YY'}}</p>
@@ -26,3 +51,4 @@
     <h2>{{user.first_name + ' ' + user.last_name}}</h2>
     <p>Email: {{user.email}}</p>
 </div>
+

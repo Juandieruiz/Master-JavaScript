@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PeticionesService } from 'src/app/services/peticiones.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-externo',
   templateUrl: './externo.component.html',
@@ -12,6 +13,10 @@ export class ExternoComponent implements OnInit {
   public fecha: any;
   public numero1:number;
   public numero2:number;
+  public usuario_guardado:any;
+
+  // TODO: Ejercicio con formularios, AJAX  y HTTP Post
+  public new_user:any;
 
   constructor(
     
@@ -21,6 +26,10 @@ export class ExternoComponent implements OnInit {
       this.userId = 1;
       this.numero1 = 750;
       this.numero2 = 250;
+        this.new_user = {
+                            "name": "morpheus",
+                            "job": "leader"
+                        }
       }
 
   ngOnInit() {
@@ -39,9 +48,18 @@ export class ExternoComponent implements OnInit {
           console.log(result);
         }
       );
-
-
     }
+
+    onSubmit(form: any){
+      this._peticionService.addUser(this.new_user).subscribe(
+        result => {
+          this.usuario_guardado = result;
+          form.reset();
+        }
+      );
+    }
+    
+
 }
 
 
