@@ -3,9 +3,12 @@
 <!-- Pipe date -->
 <p>Pipes de Fechas</p>
 <p>{{fecha | date:'dd/MM/YY'}}</p>
-<!-- Pipe de transformación de textos -->
+<!-- Pipe de fecha y transformación de texto Mayúscula  -->
 <p>{{fecha | date:'fullDate' | uppercase}}</p>
-{{ 'HOLA MUNDO USANDO PIPES DE ANGULAR' | lowercase }}
+<!-- Pipe de transformación de texto minúscula -->
+{{ 'HOLA MUNDO USANDO PIPES DE ANGULAR' | lowercase }} 
+<!-- Pipe personalizada - Calculadora -->
+{{ numero1 | calculadora: numero2}}
 
 <hr>
 <div>

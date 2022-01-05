@@ -10,6 +10,8 @@ export class ExternoComponent implements OnInit {
   public user:any;
   public userId: any;
   public fecha: any;
+  public numero1:number;
+  public numero2:number;
 
   constructor(
     
@@ -17,6 +19,8 @@ export class ExternoComponent implements OnInit {
     private _peticionService: PeticionesService,
     ) { 
       this.userId = 1;
+      this.numero1 = 750;
+      this.numero2 = 250;
       }
 
   ngOnInit() {
@@ -35,6 +39,8 @@ export class ExternoComponent implements OnInit {
           console.log(result);
         }
       );
+
+
     }
 }
 
