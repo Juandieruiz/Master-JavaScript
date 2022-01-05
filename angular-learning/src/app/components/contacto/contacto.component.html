@@ -1,0 +1,21 @@
+<!-- Creacion de Formulario de Angular -->
+<h2>Contacto</h2>
+<!-- Definimos #nombreDeFormulario | convertimos el formulario de HTML a Angular-->
+<!-- Tambien definimos el ngSubmit que ejecutar la funcion onSubmit en este caso -->
+<form #formContacto="ngForm" (ngSubmit)="onSubmit()">
+    <input type="text" name="nombre" placeholder="Nombre" 
+    #nombre="ngModel" [(ngModel)]="usuario.nombre"> <br>
+
+    <input type="text" name="apellidos" placeholder="Apellidos"
+    #apellidos="ngModel" [(ngModel)]="usuario.apellidos"><br>
+
+    <input type="text" name="email" placeholder="Email" 
+    #email="ngModel" [(ngModel)]="usuario.email"><br>
+
+    <textarea name="mensaje" placeholder="mensaje"
+    #mensaje="ngModel" [(ngModel)]="usuario.mensaje"></textarea> <br>
+
+    <input type="submit" value="Enviar">
+    
+
+</form>

@@ -9,7 +9,7 @@ export class CalculadoraPipe implements PipeTransform {
   
   // dato | calculadora: otroDato
   // param1              param2 
-  transform(value: any, value_two: any) {
+  transform(value: number, value_two: number) {
     let operaciones = `
       Suma: ${value + value_two} -
       Resta: ${value - value_two} -
