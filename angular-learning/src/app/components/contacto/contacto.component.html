@@ -3,19 +3,43 @@
 <!-- Definimos #nombreDeFormulario | convertimos el formulario de HTML a Angular-->
 <!-- Tambien definimos el ngSubmit que ejecutar la funcion onSubmit en este caso -->
 <form #formContacto="ngForm" (ngSubmit)="onSubmit()">
-    <input type="text" name="nombre" placeholder="Nombre" 
-    #nombre="ngModel" [(ngModel)]="usuario.nombre"> <br>
 
-    <input type="text" name="apellidos" placeholder="Apellidos"
-    #apellidos="ngModel" [(ngModel)]="usuario.apellidos"><br>
+<!-- Label creado como campo de Formulario, #nombre para ser reconocido en Angular -->
+<!-- ngModel Para two way data binding-->
+<!-- Required pattern para campos de solo letras -->
+<!-- Directiva ngIf para que si el input es tocado, o invalido salte el mensaje -->
+    
+<label>Nombre</label><br>
+    <input type="text" name="nombre" placeholder="Tu Nombre*" 
+    #nombre="ngModel" [(ngModel)]="usuario.nombre" 
+    required pattern="[a-z A-Z]+">
+    <span *ngIf="nombre.touched && !nombre.valid">
+        El nombre es obligatorio
+    </span> <br>
 
-    <input type="text" name="email" placeholder="Email" 
-    #email="ngModel" [(ngModel)]="usuario.email"><br>
+    <label>Apellidos</label><br>
+    <input type="text" name="apellidos" placeholder="Tus Apellidos*"
+    #apellidos="ngModel" [(ngModel)]="usuario.apellidos" 
+    required pattern="[a-zA-Z]+">
+    <span *ngIf="apellidos.touched && !apellidos.valid">
+        Los apellidos son obligatorios
+    </span> <br>
 
-    <textarea name="mensaje" placeholder="mensaje"
-    #mensaje="ngModel" [(ngModel)]="usuario.mensaje"></textarea> <br>
+    <label>Email</label><br>
+    <input type="text" name="email" placeholder="Tu correo Electronico*" 
+    #email="ngModel" [(ngModel)]="usuario.email" required>
+    <span *ngIf="email.touched && !email.valid">
+        El email no es valido
+    </span> <br>
 
-    <input type="submit" value="Enviar">
+    <label>Mensaje</label><br>
+    <textarea name="mensaje" placeholder="Tu mensaje*"
+    #mensaje="ngModel" [(ngModel)]="usuario.mensaje" required></textarea> 
+    <span *ngIf="mensaje.touched && !mensaje.valid">
+        El mensaje es obligatorio
+    </span> <br>
+
+    <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
     
 
 </form>
