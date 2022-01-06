@@ -31,7 +31,11 @@ Filas, Columnas, Registros
 ```
 Documento, Campo, Datos doc.
 ```
+## Instalación
 
+- Download Free MongoDB (OpenSource)
+- Custom Download for advanced users
+- Mongod.exe & Mongo.exe in C/archivosdeprograma/MongoDB/bin/
 
 ---
 ⌨️ con ❤️ por [Juandieruiz](https://github.com/Juandieruiz) 😊
