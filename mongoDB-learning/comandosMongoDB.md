@@ -1,4 +1,4 @@
-# Comandos Iniciales MongoDB
+# Comandos Windows MongoDB
 
 ### Creación de nueva base de datos
 ```
