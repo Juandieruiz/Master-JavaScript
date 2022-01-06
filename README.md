@@ -13,8 +13,9 @@ JQuery: jquery - jquery UI
 ### Mid Level🔧
 
 Folders:
-TS:
-Angular:
+TS: variables, tipado, POO, Decoradores
+Angular: Estructuras, Componentes, Modelos, Directivas, Databinding, Eventos, ngClass Directive, Routing, NgTemplate, Servicios HTTP & AJAX,
+Pipes, Formularios.
 
 ```
 📋Learning List: JS, TS, Angular
