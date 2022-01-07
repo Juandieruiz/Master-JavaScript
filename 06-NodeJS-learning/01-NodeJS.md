@@ -24,3 +24,9 @@ node nombre_archivo.js + parametros
 
 ## Calculadora
 
+- Creación de una calculadora básica
+- Recolección de datos con:
+```
+let datosRecogidos = process.argv.slice(2);
+```
+
