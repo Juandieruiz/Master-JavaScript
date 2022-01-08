@@ -30,3 +30,11 @@ node nombre_archivo.js + parametros
 let datosRecogidos = process.argv.slice(2);
 ```
 
+## Dependencias
+
+Todas las dependencias instaladas serán almacenadas en el package.json
+- Express
+- Body-Parser
+- Conect-multiparty
+- Mongoose
+- Nodemon
