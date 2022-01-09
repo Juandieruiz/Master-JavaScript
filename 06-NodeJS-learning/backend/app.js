@@ -21,11 +21,16 @@ app.get('/', (req, res) => {
         "<h1>Pagina de inicio desde NodeJS</h1>"
     );
 });
-app.get('/test', (req, res) => {
+app.post('/test/:id', (req, res) => {
+    console.log(req.body.nombre);
+    console.log(req.body.apellidos);
+    console.log(req.query.web);
+    console.log(req.params.id);
+
     res.status(200).send({
         test : 'Hola Mundo desde mi API de NodeJS /test'
     });
-});
+});  
 
 // Exportar modulo
 module.exports = app;
