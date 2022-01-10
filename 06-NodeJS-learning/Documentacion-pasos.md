@@ -55,3 +55,38 @@
 - y finalizamos exportando el modulo y pasandole el nombre del modelo y el schema de moongose
 
 - Recuerda que el nombre lo tenemos que poner en minusculas y plural o igualmente lo cambiara en la base de datos
+
+# Clase 6 #222
+#### Modelo Vista Controlador
+##### Patron de diseño
+
+- Sirve para organizar la arquitectura de la aplicación, ya que es un patrón de diseño de software que separa la logica de negocio de la interfaz del usuario 
+
+- Facilita la mantenibilidad, escabilidad de la web o app creada, y es sencillo de aplicar y no mezclamos las diferentes partes que tiene la aplicación
+
+## MODELO:
+### Tipo 1:
+- Entidad o referencia hacia un documento de la base de datos
+- Modelo para guardar información
+- Haremos consultas en base a ese modelo en la base de datos
+- Es el modelo creado en el archivo project.js que se encuentra en la carpeta models
+
+### Tipo 2:
+
+- Modelos de consulta que son clases que tienen diferentes metodos para acceder a la base de datos, en el que se hacen consultas y se devuelven al controlador
+
+
+## Vista
+
+### 
+- Es la encargada de mostrar la informacion al usuario
+- En este caso como es una API REST, Se devolveran los datos al cliente o usuario que haga la petición
+
+## Controlador
+
+- Es el intermediario entre la vista y el modelo, que se encarga de controlar todas las interacciones del usuario y todas las peticiones que se vayan realizando mediante HTTP en este caso
+- Pide los datos al modelo, devuelve informacion a la vista, en este caso por JSON
+- Hace cierta logica que hara el programa
+
+Documentacion Wikipedia extra 
+[https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador]
