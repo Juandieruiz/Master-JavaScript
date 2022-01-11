@@ -104,3 +104,18 @@ Documentacion Wikipedia extra
 
 - Volvemos a app.js y cargamos los archivos de rutas
 - y en rutas agreamos la ruta anteriormente dada 
+
+## Metodos
+### Metódo para guardar nuevos documentos
+
+- En el archivo projects.js de la carpeta controllers, creamos el metodo saveProject
+
+- Debemos importar el modelo de project
+
+- Creamos una variable para guardar el nuevo documento que se va a guardar en la base de datos(project)
+
+- Creamos una variable para guardar los datos que nos llegan por post(body a params)
+
+- luego guardamos el proyecto en la base de datos con sus respectivas verificaciones (if)
+
+- Si todo sale bien, devolvemos un mensaje de exito, en caso contrario devolvemos un mensaje de error, datos encontrados en Postman.

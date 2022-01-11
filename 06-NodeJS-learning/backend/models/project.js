@@ -17,13 +17,17 @@ let ProjectSchema = Schema({
         required: true
     },
     technologies: {
-        type: Array
+        type: String
     },
     year: {
         type: Number,
         required: true
+    },
+    image: {
+        type: String,
+        required: false
     }
 });
 
-module.exports = moongose.model('Project', ProjectSchema);
+module.exports = mongoose.model('Project', ProjectSchema);
 // projects --> guarda los documents de la coleccion
