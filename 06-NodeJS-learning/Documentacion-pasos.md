@@ -90,3 +90,9 @@
 
 Documentacion Wikipedia extra 
 [https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador]
+
+# Clase 7 #223
+### Controladores
+- Creamos una nueva carpeta "controllers" y dentro de ella creamos un archivo llamado projects.js
+
+- Creamos los metodos que necesitamos para nuestra aplicacion y los exportamos (home y test)
