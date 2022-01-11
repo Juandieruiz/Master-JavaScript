@@ -96,3 +96,11 @@ Documentacion Wikipedia extra
 - Creamos una nueva carpeta "controllers" y dentro de ella creamos un archivo llamado projects.js
 
 - Creamos los metodos que necesitamos para nuestra aplicacion y los exportamos (home y test)
+
+### Rutas
+- Creamos una nueva carpeta "routes" y dentro de ella creamos un archivo llamado projects.js
+
+- En el archivo lo que hacemos es importar los controladores y darle uso a los metodos(home y test) y a la vez crear las rutas get y post y las exportamos
+
+- Volvemos a app.js y cargamos los archivos de rutas
+- y en rutas agreamos la ruta anteriormente dada 
