@@ -37,6 +37,22 @@ let controller = {
         });
         
     },
+    
+    getProject: function(request,response){
+        let projectId = request.params.id;
+        
+        if(projectId == null) return response.status(404).send({message: 'El proyecto no existe'});
+
+        Project.findById(projectId, (err, project) => {
+            if(err) return response.status(500).send({message: 'Error al devolver los datos'});
+
+            if(!project) return response.status(404).send({message: 'El proyecto no existe'});
+
+            return response.status(200).send({
+                project
+            });
+        });
+    }
 
 };
 

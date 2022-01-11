@@ -107,7 +107,7 @@ Documentacion Wikipedia extra
 
 ## Metodos
 ### Metódo para guardar nuevos documentos
-
+#### SaveProject
 - En el archivo projects.js de la carpeta controllers, creamos el metodo saveProject
 
 - Debemos importar el modelo de project
@@ -119,3 +119,15 @@ Documentacion Wikipedia extra
 - luego guardamos el proyecto en la base de datos con sus respectivas verificaciones (if)
 
 - Si todo sale bien, devolvemos un mensaje de exito, en caso contrario devolvemos un mensaje de error, datos encontrados en Postman.
+
+# Clase 8 #224
+### Metodo que nos devuelve un documento de la bbdd
+#### getProject
+
+- Declaramos la variable projectId, que sera el id del proyecto que queremos obtener
+
+- Mongoose usa findById para buscar un documento en la base de datos, el que tiene 2 parametros que son nuestro id y un callback que se ejecuta cuando se encuentra el documento
+
+- creamos una condicional if para verificar si el documento existe o no
+
+
