@@ -105,7 +105,7 @@ Documentacion Wikipedia extra
 - Volvemos a app.js y cargamos los archivos de rutas
 - y en rutas agreamos la ruta anteriormente dada 
 
-## Metodos
+## Metodos Clase #224
 ### Metódo para guardar nuevos documentos
 #### SaveProject
 - En el archivo projects.js de la carpeta controllers, creamos el metodo saveProject
@@ -120,7 +120,7 @@ Documentacion Wikipedia extra
 
 - Si todo sale bien, devolvemos un mensaje de exito, en caso contrario devolvemos un mensaje de error, datos encontrados en Postman.
 
-# Clase 8 #224
+# Clase 8 #225
 ### Metodo que nos devuelve un documento de la bbdd
 #### getProject
 
@@ -130,4 +130,14 @@ Documentacion Wikipedia extra
 
 - creamos una condicional if para verificar si el documento existe o no
 
+# Clase 8 #226
+### Devolver listado de proyectos
+####  getProjects
 
+- Creamos la Funcion getProjects la cual devolvera todos los proyectos
+
+- La funcion contentra dos parametros(req y res) y haremos uso del metodo find para buscar todos los documentos de la base de datos al que tambien debemos pasar un callback y hacer uso de la funcion send para enviar los datos al cliente
+
+- Se hacen dos validaciones if para verificar si existen o no los documentos y en caso contrario devolvemos un mensaje de error
+
+- Se hace un return de la funcion para que se ejecute la funcion getProjects
