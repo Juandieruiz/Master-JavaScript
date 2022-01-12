@@ -141,3 +141,22 @@ Documentacion Wikipedia extra
 - Se hacen dos validaciones if para verificar si existen o no los documentos y en caso contrario devolvemos un mensaje de error
 
 - Se hace un return de la funcion para que se ejecute la funcion getProjects
+
+# Clase 8 #227
+### Actualizar Proyectos
+
+####  updateProject
+
+- Creamos la funcion updateProject la cual actualizara un proyecto en base de datos
+
+- La funcion contentra dos parametros(req y res) y haremos uso del metodo findByIdAndUpdate para buscar un documento en la base de datos y actualizarlo
+
+- Se hacen dos validaciones if para verificar si existen o no los documentos y en caso contrario devolvemos un mensaje de error
+
+- Se hace un return de la funcion para que se ejecute la funcion updateProject
+
+- Se configura la ruta pasandole el id, y el metodo que queremos que se ejecute y la funcion que se ejecutara updateProject
+
+- En Postman cuando mandamos la petición PUT, nos devolvera el proyecto antiguo pero cuando revisamos en la bbdd esta guardado el nuevo
+
+- EXTRA: Si queremos que el proyecto que muestre POSTMAN sea el nuevo proyecto, debemos crear un 3 parametro {new: true} en la funcion findByIdAndUpdate

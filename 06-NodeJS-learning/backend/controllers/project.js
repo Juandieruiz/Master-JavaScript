@@ -63,7 +63,23 @@ let controller = {
 
             return res.status(200).send({projects});            
         });
-    }
+    },
+
+    updateProject: function(req,res){
+        let projectId = req.params.id;
+        let update = req.body;
+
+        Project.findByIdAndUpdate(projectId,update,{new:true},(err,projectUpdated) => {
+            if(err) return res.status(500).send({message: 'Error al actualizar'});
+
+            if(!projectUpdated) return res.status(404).send({message: 'No existe el proyecto'});
+
+            return res.status(200).send({
+                project: projectUpdated
+            })
+        })
+
+    },
 
 };
 
