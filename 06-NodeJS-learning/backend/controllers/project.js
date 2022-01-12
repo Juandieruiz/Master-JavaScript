@@ -81,7 +81,7 @@ let controller = {
 
     },
 
-    deleteProject: function(req,res){
+    removeProject: function(req,res){
         let projectId = req.params.id;
 
         Project.findByIdAndRemove(projectId,(err,projectRemoved) => {
@@ -95,6 +95,32 @@ let controller = {
         });
 
     },
+
+    uploadImage: function(req,res){
+        let projectId = req.params.id;
+        let fileName = 'Imagen no subida...';
+
+        if(req.files){
+            let filePath = req.files.image.path;
+            let fileSplit = filePath.split('\\');
+            let fileName = fileSplit[1]; 
+
+            Project.findByIdAndUpdate(projectId, {image: fileName},{new: true}, (err, projectUpdated) => {
+            if(err) return res.status(500).send({message: 'Error al actualizar'});
+
+            if(!projectUpdated) return res.status(404).send({ message:'El proyecto no existe'});
+
+            return res.status(200).send({
+                project: projectUpdated
+            })
+        });
+
+        }else {
+            return res.status(404).send({
+                message: fileName
+            });
+        }
+    }
 
 };
 

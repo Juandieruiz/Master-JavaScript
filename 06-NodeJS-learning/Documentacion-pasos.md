@@ -124,6 +124,8 @@ Documentacion Wikipedia extra
 ### Metodo que nos devuelve un documento de la bbdd
 #### getProject
 
+- Creamos un metodo getProject que nos devuelve un documento de la bbdd
+
 - Declaramos la variable projectId, que sera el id del proyecto que queremos obtener
 
 - Mongoose usa findById para buscar un documento en la base de datos, el que tiene 2 parametros que son nuestro id y un callback que se ejecuta cuando se encuentra el documento
@@ -134,7 +136,7 @@ Documentacion Wikipedia extra
 ### Devolver listado de proyectos
 ####  getProjects
 
-- Creamos la Funcion getProjects la cual devolvera todos los proyectos
+- Creamos el metodo getProjects la cual devolvera todos los proyectos
 
 - La funcion contentra dos parametros(req y res) y haremos uso del metodo find para buscar todos los documentos de la base de datos al que tambien debemos pasar un callback y hacer uso de la funcion send para enviar los datos al cliente
 
@@ -147,7 +149,7 @@ Documentacion Wikipedia extra
 
 ####  updateProject
 
-- Creamos la funcion updateProject la cual actualizara un proyecto en base de datos
+- Creamos el metodo updateProject la cual actualizara un proyecto en base de datos
 
 - La funcion contentra dos parametros(req y res) y haremos uso del metodo findByIdAndUpdate para buscar un documento en la base de datos y actualizarlo
 
@@ -162,11 +164,11 @@ Documentacion Wikipedia extra
 - EXTRA: Si queremos que el proyecto que muestre POSTMAN sea el nuevo proyecto, debemos crear un 3 parametro {new: true} en la funcion findByIdAndUpdate
 
 # Clase 8 #228
-### Borrar Proyectos
+### Borrar Proyectos DELETE
 
-####  deleteProject
+####  removeProject
 
-- Creamos la funcion deleteProject la cual borrara un proyecto en base de datos
+- Creamos el metodo removeProject la cual borrara un proyecto en base de datos
 
 - La funcion contentra dos parametros(req y res) y haremos uso del metodo findByIdAndRemove para buscar un documento en la base de datos y borrarlo
 
@@ -177,3 +179,27 @@ Documentacion Wikipedia extra
 - Configuramos la ruta pasandole el id, y el metodo que queremos que se ejecute y la funcion que se ejecutara deleteProject
 
 - En Postman cuando mandamos la petición DELETE, nos devolvera un mensaje de exito
+
+# Clase 9 #229
+### Subida de Imagenes con Multi-Party
+
+####  uploadImage
+
+- Creamos el metodo uploadImage la cual subira una imagen a la base de datos
+
+- declaramos dos variables que sera el id del proyecto y la imagen que se va a subir que por ahora no esta subida
+
+- hacemos una condicional if en la que tenemos como parametro un archivo files 
+
+- definimos 3 variables filePath , que tomara el path de la imagen subida, fileSplit y fileName que tomara el nombre de la imagen
+
+- Usamos el metodo FindByIdAndUpdate para buscar un documento en la base de datos y actualizarlo
+
+- le pasamos el id del proyecto y un objeto con la imagen y el nombre de la imagen
+
+- hacemos las dos validaciones if para verificar si existen o no los documentos y en caso contrario devolvemos un mensaje de error
+
+- Se hace un return de la funcion para que se ejecute la funcion uploadImage y nos devuelva el proyecto en Postman
+
+- Procedemos a crear la ruta, pero muy importante configurar el middleware multiparty para que nos permita subir archivos
+
