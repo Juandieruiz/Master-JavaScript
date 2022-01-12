@@ -213,3 +213,12 @@ Documentacion Wikipedia extra
 - Como hemos dicho antes si el archivo es valido entrara a guardarlo y si no lo es lo que hara será borrarlo
 
 - Para borrarlo importamos una libreria de node llamada fs y como respuesta al if anterior agregamos un else que se encargara de borrar el archivo y dar un mensaje de La extension del archivo no es valida
+
+# Clase 11 #231
+### Configurar cabeceras y acceso CORS (Cross-Origin Resource Sharing) en NodeJS
+
+####  Cración del middleware CORS en app.js de routes
+
+- Se ejecutara siempre antes de que se ejecute cualquier ruta, para configurar las cabeceras y pasando a lo siguiente, para que el servidor pueda responder a las peticiones de los clientes
+
+- hemos dejado en el header acceso a todo, pero si fuese alguna pagina especial iría en esa ubicación (// Configurar cabeceras y acceso CORS en NodeJS)
