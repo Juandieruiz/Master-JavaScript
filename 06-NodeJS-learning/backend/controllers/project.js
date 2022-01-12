@@ -1,5 +1,6 @@
 'use strict';
 let Project = require('../models/project');
+let fs = require('fs');
 
 let controller = {
     
@@ -104,17 +105,26 @@ let controller = {
             let filePath = req.files.image.path;
             let fileSplit = filePath.split('\\');
             let fileName = fileSplit[1]; 
+            let extSplit = fileName.split('\.');
+            let fileExt = extSplit[1];
 
-            Project.findByIdAndUpdate(projectId, {image: fileName},{new: true}, (err, projectUpdated) => {
-            if(err) return res.status(500).send({message: 'Error al actualizar'});
+            if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif'){
+                Project.findByIdAndUpdate(projectId, {image: fileName},{new: true}, (err, projectUpdated) => {
+                    if(err) return res.status(500).send({message: 'Error al actualizar'});
+        
+                    if(!projectUpdated) return res.status(404).send({ message:'El proyecto no existe'});
+        
+                    return res.status(200).send({
+                        project: projectUpdated
+                    })
+                });
+            }else{
 
-            if(!projectUpdated) return res.status(404).send({ message:'El proyecto no existe'});
+                fs.unlink(filePath, (err) =>{
+                    return res.status(200).send({message: 'La extension no valida'});
+                });
 
-            return res.status(200).send({
-                project: projectUpdated
-            })
-        });
-
+            }
         }else {
             return res.status(404).send({
                 message: fileName

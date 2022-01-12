@@ -203,3 +203,13 @@ Documentacion Wikipedia extra
 
 - Procedemos a crear la ruta, pero muy importante configurar el middleware multiparty para que nos permita subir archivos
 
+# Clase 10 #230
+### Mejora de subida de imagenes
+
+####  variable extSplit & fileExt
+
+- Hemos decidido mejorar la subida de imagenes aceptando solo ciertos archivos que sean de tipo jpg, jpeg, png, gif pasando por un if
+
+- Como hemos dicho antes si el archivo es valido entrara a guardarlo y si no lo es lo que hara será borrarlo
+
+- Para borrarlo importamos una libreria de node llamada fs y como respuesta al if anterior agregamos un else que se encargara de borrar el archivo y dar un mensaje de La extension del archivo no es valida
