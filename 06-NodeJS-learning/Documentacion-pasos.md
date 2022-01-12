@@ -160,3 +160,20 @@ Documentacion Wikipedia extra
 - En Postman cuando mandamos la petición PUT, nos devolvera el proyecto antiguo pero cuando revisamos en la bbdd esta guardado el nuevo
 
 - EXTRA: Si queremos que el proyecto que muestre POSTMAN sea el nuevo proyecto, debemos crear un 3 parametro {new: true} en la funcion findByIdAndUpdate
+
+# Clase 8 #228
+### Borrar Proyectos
+
+####  deleteProject
+
+- Creamos la funcion deleteProject la cual borrara un proyecto en base de datos
+
+- La funcion contentra dos parametros(req y res) y haremos uso del metodo findByIdAndRemove para buscar un documento en la base de datos y borrarlo
+
+- Se hacen dos validaciones if para verificar si existen o no los documentos y en caso contrario devolvemos un mensaje de error
+
+- Se hace un return de la funcion para que se ejecute la funcion deleteProject
+
+- Configuramos la ruta pasandole el id, y el metodo que queremos que se ejecute y la funcion que se ejecutara deleteProject
+
+- En Postman cuando mandamos la petición DELETE, nos devolvera un mensaje de exito
