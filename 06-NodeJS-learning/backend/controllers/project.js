@@ -1,6 +1,7 @@
 'use strict';
-let Project = require('../models/project');
-let fs = require('fs');
+const Project = require('../models/project');
+const fs = require('fs');
+const path = require('path');
 
 let controller = {
     
@@ -130,6 +131,19 @@ let controller = {
                 message: fileName
             });
         }
+    },
+
+    getImageFile: function(req,res){
+        let file = req.params.image;
+        let path_file = './uploads/'+file;
+
+        fs.access(path_file, fs.constants.F_OK, (err) => {
+            if(err){
+                return res.status(200).send({message: 'No existe la imagen'});
+            }else{
+                return res.sendFile(path.resolve(path_file));
+            }
+        });
     }
 
 };

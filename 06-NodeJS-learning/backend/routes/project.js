@@ -22,4 +22,7 @@ router.delete('/project/:id', ProjectController.removeProject);
 // subir imagen con multiparty
 router.post('/upload-image/:id',multipartMiddleware, ProjectController.uploadImage);
 
+//subir imagen a proyecto
+router.get('/get-image/:image', ProjectController.getImageFile);
+
 module.exports = router;
