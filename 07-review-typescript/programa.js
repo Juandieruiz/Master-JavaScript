@@ -19,7 +19,7 @@ var Programa = /** @class */ (function () {
     function Programa() {
     }
     Programa.prototype.getNombre = function () {
-        return this.getNombre;
+        return this.nombre;
     };
     Programa.prototype.setNombre = function (nombre) {
         this.nombre = nombre;
@@ -56,3 +56,25 @@ editor.setNombre("Camtasia Studio");
 editor.setVersion(8);
 editor.setTimeline(4000);
 console.log(editor.getAllData());
+// Logica de formulario
+var programas = [];
+function guardar() {
+    // Obtenemos los valores del formulario
+    var nombre = document.getElementById("nombre").value.toString();
+    // Creamos un nuevo objeto 
+    var programa = new Programa();
+    // Asignamos los valores al objeto
+    programa.setNombre(nombre);
+    programa.setVersion(1);
+    // Añadimos el objeto a un array
+    programas.push(programa);
+    // Recorremos el Array de programas
+    var list = "";
+    for (var i = 0; i < programas.length; i++) {
+        list = list + "<li>" + programas[i].getNombre() + "</li>";
+    }
+    // Mostramos los datos en el HTML
+    var listado = document.getElementById("listado");
+    listado.innerHTML = list;
+    document.getElementById("nombre").value = "";
+}

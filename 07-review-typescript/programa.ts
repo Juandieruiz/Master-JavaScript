@@ -5,7 +5,7 @@ class Programa {
     public version: number;
 
     getNombre(){
-        return this.getNombre;
+        return this.nombre;
     }
 
     setNombre(nombre:string){
@@ -52,3 +52,33 @@ editor.setVersion(8);
 editor.setTimeline(4000);
 
 console.log(editor.getAllData());
+
+
+// Logica de formulario
+
+let programas = [];
+
+function guardar(){
+    // Obtenemos los valores del formulario
+    let nombre = (<HTMLInputElement>document.getElementById("nombre")).value.toString();
+    // Creamos un nuevo objeto 
+    let programa = new Programa();
+        // Asignamos los valores al objeto
+        programa.setNombre(nombre);
+        programa.setVersion(1);
+        // Añadimos el objeto a un array
+        programas.push(programa);
+
+    // Recorremos el Array de programas
+    let list = "";
+    for(let i=0; i<programas.length; i++){
+        list = list + "<li>" + programas[i].getNombre() + "</li>";
+    }
+
+    // Mostramos los datos en el HTML
+    let listado = <HTMLElement>document.getElementById("listado");
+    listado.innerHTML = list;
+
+    (<HTMLInputElement>document.getElementById("nombre")).value = "";
+
+}
