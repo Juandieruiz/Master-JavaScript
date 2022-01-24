@@ -1,5 +1,11 @@
+// interface donde declaramos obligatoriamente los atributos que tendra la clase
+interface CocheBase {
+    getModelo():string;
+    getVelocidad():number;
+}
+
 // Clase de coche/Molde- POO
-class Coche{
+class Coche implements CocheBase{
     
     // Definir atributos - propiedades
     public color:string;
