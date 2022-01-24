@@ -1,6 +1,38 @@
+// !MODULOS INTERNOS
+module Tienda{
+    export class Ropa{
+        constructor(public title:string){
+            alert(' Tienda de Ropa'+ title);
+        }
+    }
+    export class Informatica{
+        constructor(public title:string){
+            alert('Tienda de Tecnología ' + title);
+        }
+    }
+}
+
+import Informatica = Tienda.Informatica;
+let cargar_informatica = new Informatica("JuandInformatica");
+
+// !DECORADOR
+// El Decorador arranque agregara un nuevo metodo/funcion a la clase
+function arranque(lanzar:string){
+    return function(target:Function){
+        // Es una funcion que devuelve un console log
+        target.prototype.lanzamiento = function(): void{
+            alert(lanzar);
+        }
+    }
+}
+
+
 // Herencia
 // Creamos un programa padre
+@arranque("Lanzamiento del Programa a la aplicación")
 class Programa {
+    [x: string]: any;
+    
     public nombre: string;
     public version: number;
 
@@ -23,6 +55,11 @@ class Programa {
 
 
 }
+// Decorador
+let programa = new Programa();
+programa.lanzamiento();
+
+
 
 // Creamos un programa hijo en el que instanciamos el padre
 class EditorVideo extends Programa{

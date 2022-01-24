@@ -1,0 +1,7 @@
+// Activo el experimental decorators para que pueda habilitarse en programa.ts
+{
+    "compilerOptions": {
+        "experimentalDecorators": true
+    }
+    
+}
