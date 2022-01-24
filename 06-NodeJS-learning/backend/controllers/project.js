@@ -139,7 +139,9 @@ let controller = {
 
         fs.access(path_file, fs.constants.F_OK, (err) => {
             if(err){
+
                 return res.status(200).send({message: 'No existe la imagen'});
+                
             }else{
                 return res.sendFile(path.resolve(path_file));
             }
